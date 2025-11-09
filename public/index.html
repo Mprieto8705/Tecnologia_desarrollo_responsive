@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Básico</title>
+  <link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#004aad">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log("✅ Service Worker registrado"))
+        .catch(err => console.error("Error al registrar SW:", err));
+    });
+  }
+</script>
+</head>
+
+<body>
+  <header>
+    <h1>Mi Tienda Online</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Carrito</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>$25.000</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>$40.000</p>
+        <button>Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Mi Tienda Online</p>
+  </footer>
+</body>
+</html>
